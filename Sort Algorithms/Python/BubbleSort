@@ -1,10 +1,13 @@
+def Bubblesort(List,Size):
+    for i in range(Size-1):
+        for j in range(Size-1):
+            if List[j]>List[j+1]:                                      #If Element at next position is greater than current
+                temp=List[j]                                           #Then Swap both elements.
+                List[j]=List[j+1]
+                List[j+1]=temp
+    return(List)
+
 List=[8,7,6,5,4,3,2,1]                                             #List with unsorted values
 Size=len(List)                                                     #Take the length of the array
-
-for i in range(Size-1):
-    for j in range(Size-1):
-        if List[j]>List[j+1]:                                      #If Element at next position is greater than current
-            temp=List[j]                                           #Then Swap both elements.
-            List[j]=List[j+1]
-            List[j+1]=temp
+Bubblesort(List,Size)
 print("Soterd Array-->",List)
