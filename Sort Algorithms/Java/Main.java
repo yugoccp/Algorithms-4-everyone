@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        SortAlgorithm<Integer> selectionSort = new SelectionSort<>();
+        SortAlgorithm<Integer> insertionSort = new InsertionSort<>();
         Integer[] array = new Integer[]{3, 5, 6, 8, 7};
-        selectionSort.sort(array);
+        insertionSort.sort(array);
 
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(3);
@@ -13,7 +13,7 @@ public class Main {
         arrayList.add(8);
         arrayList.add(7);
 
-        selectionSort.sort(arrayList);
+        insertionSort.sort(arrayList);
 
         for (Integer i : array) {
             System.out.println(i);
