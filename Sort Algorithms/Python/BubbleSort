@@ -1,12 +1,5 @@
-# Algorithm:1
-# Bubble Sort
-# Author:--Green--Arrow-->
-
-
-Size=int(input("Enter the Size-->"))                               # Defines the Size of the Array
-List=[]                                                            #Creates an Empty List To store Values
-for item in range(Size):
-    List.append(int(input("Enter the Value-->")))                  #Takes the input from the user in integer format
+List=[8,7,6,5,4,3,2,1]                                             #List with unsorted values
+Size=len(List)                                                     #Take the length of the array
 
 for i in range(Size-1):
     for j in range(Size-1):
@@ -14,4 +7,4 @@ for i in range(Size-1):
             temp=List[j]                                           #Then Swap both elements.
             List[j]=List[j+1]
             List[j+1]=temp
-print("Soterd Array-->"List)
+print("Soterd Array-->",List)
