@@ -1,19 +1,19 @@
 //after each iternation you have 1 number in the correct positon
-//smallest to largest
+//largest to smallest
 //O(n2) - worst case
-function selectionSortAscending(inputArray){
+function selectionSortDescending(inputArray){
     for(var i = 0; i < inputArray.length - 1; i++){
-      var minIndex = i;
+      var maxIndex = i;
       for(var j = i + 1; j < inputArray.length; j++){
-        if(inputArray[minIndex] > inputArray[j]){
-          minIndex = j;//found new minimum
+        if(inputArray[maxIndex] < inputArray[j]){
+          maxIndex = j;//found new minimum
         }
       }
 
       //swap if minimum isn't the current i iteration
-      if(minIndex != i){
-        var temp = inputArray[minIndex];
-        inputArray[minIndex] = inputArray[i];
+      if(maxIndex != i){
+        var temp = inputArray[maxIndex];
+        inputArray[maxIndex] = inputArray[i];
         inputArray[i] = temp;
       }
       console.log('In progress: ', inputArray);
@@ -22,4 +22,4 @@ function selectionSortAscending(inputArray){
 }
 
 var input = [3,2,43,6,777,83,5,5];
-console.log('Output: ', selectionSortAscending(input));
+console.log('Output: ', selectionSortDescending(input));
