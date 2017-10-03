@@ -6,11 +6,11 @@ function selectionSortDescending(inputArray){
       var maxIndex = i;
       for(var j = i + 1; j < inputArray.length; j++){
         if(inputArray[maxIndex] < inputArray[j]){
-          maxIndex = j;//found new minimum
+          maxIndex = j;//found new maximum
         }
       }
 
-      //swap if minimum isn't the current i iteration
+      //swap if maximum isn't the current i iteration
       if(maxIndex != i){
         var temp = inputArray[maxIndex];
         inputArray[maxIndex] = inputArray[i];
