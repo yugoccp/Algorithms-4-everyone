@@ -10,7 +10,7 @@ function selectionSortAscending(inputArray){
         }
       }
 
-      //swap
+      //swap if minimum isn't the current i iteration
       if(minIndex != i){
         var temp = inputArray[minIndex];
         inputArray[minIndex] = inputArray[i];
