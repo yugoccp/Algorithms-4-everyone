@@ -1,12 +1,10 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.*;
 
 /**
  * @author Casper Rysgaard
  */
-public class MergeSort<T extends MaxValue<T> & Comparable<T>> /*extends SortAlgorithm<T>*/
+public class MergeSort<T extends MaxValue<T> & Comparable<T>>
 {
     /*
      * java class used for sorting any type of list
