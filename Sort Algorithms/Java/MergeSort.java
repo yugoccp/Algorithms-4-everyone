@@ -54,10 +54,6 @@ public class MergeSortAny<T extends MaxValue<T> & Comparable<T>>
 
     public static <T extends MaxValue<T> & Comparable<T>> void sort(T[] array)
     {
-        /*ArrayList<T> list = new ArrayList<T>(Arrays.asList(array));
-        mergeSortSplit(list, 0, list.size()-1);
-        array = list.toArray(array);*/
-
         mergeSortSplitArray(array, 0, array.length-1);
     }
 
