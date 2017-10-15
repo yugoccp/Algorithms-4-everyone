@@ -18,3 +18,10 @@ If you don't have git download the zip [here](https://github.com/imaprincess/Alg
 
 - Look at the [issues](https://github.com/imaprincess/Algorithms-4-everyone/issues): if you find something that you can do, answer the issue and make this repo grow! **Remember**: all the code will be reviewed by me and accepted only if the code follows the rules specified in every issue. **Don't pull requests if you know that your code doesn't follow all the rules!**
 - If you have some algorithms that you'd like to insert in the repo I suggest you to open an issue (so I can give you some advices), but you can directly open a pull request. 
+
+### Rules for Contribution 
+
+- The code must be full of comments (we have to understand what the code is doing!)
+- The code must be in the Proper Directory 
+- The code must be clear - please don't use little known functionalities!
+- The code must be properly Indented
