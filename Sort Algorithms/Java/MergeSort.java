@@ -4,18 +4,18 @@ import java.util.ArrayList;
 /**
  * @author Casper Rysgaard
  */
-public class MergeSortAny<T extends MaxValue<T> & Comparable<T>>
+public class MergeSort<T extends MaxValue<T> & Comparable<T>>
 {
     /*
      * java class used for sorting any type of list
      */
 
-    public static <T extends MaxValue<T> & Comparable<T>> void sort(ArrayList<T> arrayList)
+    public void sort(ArrayList<T> arrayList)
     {
         mergeSortSplit(arrayList, 0, arrayList.size()-1);
     }
 
-    private static <T extends MaxValue<T> & Comparable<T>> void mergeSortSplit(ArrayList<T> listToSort, int start, int end)
+    private void mergeSortSplit(ArrayList<T> listToSort, int start, int end)
     {
         if (start < end)
         {
@@ -26,7 +26,7 @@ public class MergeSortAny<T extends MaxValue<T> & Comparable<T>>
         }
     }
 
-    private static <T extends MaxValue<T> & Comparable<T>> void merge(ArrayList<T> listToSort, int start, int middle, int end)
+    private void merge(ArrayList<T> listToSort, int start, int middle, int end)
     {
         ArrayList<T> A = new ArrayList<T>(listToSort.subList(start, middle+1));
         ArrayList<T> B = new ArrayList<T>(listToSort.subList(middle+1, end+1));
@@ -52,12 +52,16 @@ public class MergeSortAny<T extends MaxValue<T> & Comparable<T>>
     }
 
 
-    public static <T extends MaxValue<T> & Comparable<T>> void sort(T[] array)
+    public void sort(T[] array)
     {
+        /*ArrayList<T> list = new ArrayList<T>(Arrays.asList(array));
+        mergeSortSplit(list, 0, list.size()-1);
+        array = list.toArray(array);*/
+
         mergeSortSplitArray(array, 0, array.length-1);
     }
 
-    private static <T extends MaxValue<T> & Comparable<T>> void mergeSortSplitArray(T[] listToSort, int start, int end)
+    private void mergeSortSplitArray(T[] listToSort, int start, int end)
     {
         if (start < end)
         {
@@ -68,7 +72,7 @@ public class MergeSortAny<T extends MaxValue<T> & Comparable<T>>
         }
     }
 
-    private static <T extends MaxValue<T> & Comparable<T>> void mergeArray(T[] listToSort, int start, int middle, int end)
+    private void mergeArray(T[] listToSort, int start, int middle, int end)
     {
         T[] A = (T[]) Array.newInstance(listToSort[0].getClass(),middle-start +2);
         T[] B = (T[]) Array.newInstance(listToSort[0].getClass(),end - middle +1);
@@ -93,7 +97,7 @@ public class MergeSortAny<T extends MaxValue<T> & Comparable<T>>
         }
     }
 
-    private static <T extends MaxValue<T> & Comparable<T>> void cloneArray(T[] listIn, T[] cloneInto, int start)
+    private void cloneArray(T[] listIn, T[] cloneInto, int start)
     {
         for (int i = start; i < start+cloneInto.length-1; i++)
         {
@@ -102,4 +106,9 @@ public class MergeSortAny<T extends MaxValue<T> & Comparable<T>>
 
         cloneInto[cloneInto.length-1] = listIn[0].getMaxObject();
     }
+}
+
+interface MaxValue<T>
+{
+    T getMaxObject();
 }
