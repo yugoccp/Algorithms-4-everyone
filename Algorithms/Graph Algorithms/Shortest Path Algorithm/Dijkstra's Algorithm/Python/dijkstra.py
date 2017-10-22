@@ -41,6 +41,8 @@ def dijsktra(adj, vert):
     distance = [0] * len(adj[vert])
     processed = [False] * len(adj[vert])
 
+	# Initializes the distance array of initial vertex with values from the adjacency matrix
+	# if the edge is unexistent (-1), sets the distance as maxsize
     for i in range(len(adj[vert])):
         if adj[vert][i] == -1:
             distance[i] = sys.maxsize
