@@ -106,7 +106,7 @@ class Dijkstra
                                     {6, 8, 0, 0, 9},
                                     {0, 5, 7, 9, 0},
 				    };
-        ShortestPath t = new ShortestPath();
+        Dijkstra t = new Dijkstra();
         t.dijkstra(graph, 0);
     }
 
