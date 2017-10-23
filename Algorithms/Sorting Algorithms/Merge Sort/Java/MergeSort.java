@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Casper Rysgaard
@@ -80,9 +81,5 @@ public class MergeSort<T extends MaxValue<T> & Comparable<T>> {
         }
 
         cloneInto[cloneInto.length - 1] = listIn[0].getMaxObject();
-    }
-
-    interface MaxValue<T> {
-        T getMaxObject();
     }
 }
