@@ -1,5 +1,6 @@
 // Java implementation of Counting Sort
 class CountingSort {
+
     private void sort(char arr[]) {
         int n = arr.length;
 
@@ -9,7 +10,7 @@ class CountingSort {
         // Create a count array to store count of inidividul
         // characters and initialize count array as 0
         int count[] = new int[256];
-        for (int i=0; i<256; ++i)
+        for (int i = 0; i < 256; ++i)
             count[i] = 0;
 
         // store count of each character
@@ -17,8 +18,8 @@ class CountingSort {
 
         // Change count[i] so that count[i] now contains actual
         // position of this character in output array
-        for (int i=1; i<=255; ++i)
-            count[i] += count[i-1];
+        for (int i = 1; i <= 255; ++i)
+            count[i] += count[i - 1];
 
         // Build the output character array
         for (char anArr : arr) {

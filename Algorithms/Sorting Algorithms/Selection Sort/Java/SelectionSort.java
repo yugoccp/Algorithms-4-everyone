@@ -1,8 +1,9 @@
-import java.util.ArrayList;
+import java.util.List;
 
 public class SelectionSort<T extends Comparable<T>> extends SortAlgorithm<T> {
+
     @Override
-    public void sort(ArrayList<T> arrayList) {
+    public void sort(List<T> arrayList) {
         for (int i = 0; i < arrayList.size(); i++) {
             int indiceMinimo = i;
 
@@ -18,12 +19,12 @@ public class SelectionSort<T extends Comparable<T>> extends SortAlgorithm<T> {
 
     @Override
     public void sort(T[] array) {
-        final int N = array.length;
+        final int length = array.length;
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < length; i++) {
             int indiceMinimo = i;
 
-            for (int j = i; j < N; j++) {
+            for (int j = i; j < length; j++) {
                 if (array[j].compareTo(array[indiceMinimo]) < 0) {
                     indiceMinimo = j;
                 }
